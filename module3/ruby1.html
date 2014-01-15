@@ -74,7 +74,8 @@
 	
 
 		<h2>Introducing ruby</h2>
-		<p>Ruby is a programming language. It is different to HTML and CSS, which are just <em>markup</em> languages: in ruby you can do calculations.</p>
+		
+<p>Ruby is a programming language. It is different to HTML and CSS, which are just <em>markup</em> languages: in ruby you can do calculations.</p>
 
 <p>Ruby is an incredibly powerful and flexible language. It is a modern language - created in the 1990s by Yukihiro Matsumoto (Matz). A large part of his design philosophy is centered around optimizing for developer happiness - making a language that is a pleasure to program in. If you haven’t already programmed in another language, you might not fully appreciate this, but - take it from someone who has - ruby is awesome!</p>
 
@@ -115,7 +116,7 @@
 
 <li>Open <code>irb</code> on one of your laptops.</li>
 
-<li>For each of the following ruby expressions, try to agree what value you think they evaluate to. Check if you’re right in irb.</li>
+<li>For each of the following ruby expressions, try to agree what value you think they evaluate to. Check if you&#39;re right in irb.</li>
 </ol>
 <div class='highlight'><pre><code class='ruby'><span class='mi'>1</span> <span class='o'>+</span> <span class='mi'>2</span>
 
@@ -166,7 +167,8 @@
 	
 
 		<h2>Exercise summary</h2>
-		<p>Before we will move on to variables, we’ll quickly look at a few of the things that you found out in the previous exercise:</p>
+		
+<p>Before we will move on to variables, we’ll quickly look at a few of the things that you found out in the previous exercise:</p>
 <div class='highlight'><pre><code class='ruby'><span class='o'>&gt;</span> <span class='mi'>6</span> <span class='o'>/</span> <span class='mi'>2</span>
 <span class='o'>=&gt;</span> <span class='mi'>3</span>
 <span class='o'>&gt;</span> <span class='mi'>5</span> <span class='o'>/</span> <span class='mi'>2</span>
@@ -194,6 +196,7 @@
 <p>Oh dear! Turns out that you can’t add a string to an integer. Have another read of the message that irb gave you. Can you figure out what it is saying? When something goes wrong, ruby tries to be as helpful as it can. Learning to interpret the errors that ruby gives is an important part of learning to become a programmer.</p>
 
 <p><small>The ^ operator in the optional challenge is <a href='http://en.wikipedia.org/wiki/Bitwise_operation#XOR'>bitwise exclusive or</a>.</small></p>
+
 	</div>
 
 	
@@ -201,7 +204,8 @@
 	
 
 		<h2>Names & Variables</h2>
-		<p>So far we’ve used irb as a clever calculator, by working with values directly. Programming becomes a lot more powerful when you’re able to give values <strong>names</strong>.</p>
+		
+<p>So far we’ve used irb as a clever calculator, by working with values directly. Programming becomes a lot more powerful when you’re able to give values <strong>names</strong>.</p>
 
 <p>A <strong>name</strong> is just something that you can use to refer to a value. In ruby you create a name by using the assignment operator, <code>=</code>.</p>
 <div class='highlight'><pre><code class='ruby'><span class='n'>age</span> <span class='o'>=</span> <span class='mi'>5</span>
@@ -258,11 +262,11 @@
 
 <p>String interpolation is a way of taking a variable and putting it inside a string.</p>
 
-<p>To write a string in ruby you can either use <code>'</code> or <code>&quot;</code>.</p>
+<p>To write a string in ruby you can either use <code>&#39;</code> or <code>&quot;</code>.</p>
 <div class='highlight'><pre><code class='ruby'><span class='n'>string1</span> <span class='o'>=</span> <span class='s1'>&#39;hello&#39;</span>
 <span class='n'>string2</span> <span class='o'>=</span> <span class='s2'>&quot;hello&quot;</span>
 </code></pre></div>
-<p>In the code above, string1 and string2 are exactly the same. The difference between <code>'</code> and <code>&quot;</code> is that <code>&quot;</code> allows you to do <strong>string interpolation</strong>:</p>
+<p>In the code above, string1 and string2 are exactly the same. The difference between <code>&#39;</code> and <code>&quot;</code> is that <code>&quot;</code> allows you to do <strong>string interpolation</strong>:</p>
 <div class='highlight'><pre><code class='ruby'><span class='n'>age</span> <span class='o'>=</span> <span class='mi'>5</span>
 <span class='n'>age_description</span> <span class='o'>=</span> <span class='s2'>&quot;My age is </span><span class='si'>#{</span><span class='n'>age</span><span class='si'>}</span><span class='s2'>.&quot;</span>
 <span class='o'>=&gt;</span> <span class='s2'>&quot;My age is 5.&quot;</span>
@@ -271,7 +275,7 @@
 <div class='exercise alert alert-info'><strong>Task:</strong> 
 
 <ol>
-<li>With your partner, decide what each of the following instructions will do. Test to see if you’re right in irb.</li>
+<li>With your partner, decide what each of the following instructions will do. Test to see if you&#39;re right in irb.</li>
 </ol>
 
 
@@ -356,13 +360,13 @@
 <span class='n'>c</span> <span class='o'>=</span> <span class='n'>b</span><span class='o'>.</span><span class='n'>capitalize</span>
 
 <span class='n'>b</span> <span class='c1'>#=&gt; &quot;hello&quot;</span>
-<span class='n'>c</span> <span class='c1'>#=&gt; &quot;HELLO&quot;</span>
+<span class='n'>c</span> <span class='c1'>#=&gt; &quot;Hello&quot;</span>
 
 <span class='n'>d</span> <span class='o'>=</span> <span class='s2'>&quot;hello&quot;</span> 
 <span class='n'>e</span> <span class='o'>=</span> <span class='n'>d</span><span class='o'>.</span><span class='n'>capitalize!</span>
 
-<span class='n'>d</span> <span class='c1'>#=&gt; &quot;HELLO&quot;</span>
-<span class='n'>e</span> <span class='c1'>#=&gt; &quot;HELLO&quot;</span>
+<span class='n'>d</span> <span class='c1'>#=&gt; &quot;Hello&quot;</span>
+<span class='n'>e</span> <span class='c1'>#=&gt; &quot;Hello&quot;</span>
 </code></pre></div>
 <p>This example is pretty important. In the first case <code>capitalize</code> gives back “HELLO”, but leaves the original string untouched.</p>
 <svg enable-background='new 0 0 153.667 96.666' height='96.666px' id='Layer_1' xml:space='preserve' version='1.1' viewBox='0 0 153.667 96.666' width='153.667px' x='0px' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns='http://www.w3.org/2000/svg' y='0px'>
@@ -379,7 +383,7 @@
 </g>
 <rect fill='none' height='27' stroke='#939598' stroke-miterlimit='10' stroke-width='3' width='27' x='6.89' y='56.807' />
 <text font-family='&apos;MyriadPro-Regular&apos;' font-size='12' transform='matrix(1 0 0 1 19.1484 73.8071)'>c</text>
-<text font-family='&apos;MyriadPro-Regular&apos;' font-size='12' transform='matrix(1 0 0 1 90.8896 74.8071)'>“HELLO”</text>
+<text font-family='&apos;MyriadPro-Regular&apos;' font-size='12' transform='matrix(1 0 0 1 90.8896 74.8071)'>“Hello”</text>
 <g>
   <g>
     <line fill='none' stroke='#000000' stroke-miterlimit='10' x1='33.89' x2='71.829' y1='70.807' y2='70.807' />
@@ -415,7 +419,7 @@
 <text font-family='&apos;MyriadPro-Regular&apos;' font-size='12' transform='matrix(1 0 0 1 19.1484 26)'>d</text>
 <rect fill='none' height='27' stroke='#939598' stroke-miterlimit='10' stroke-width='3' width='27' x='6.89' y='56.807' />
 <text font-family='&apos;MyriadPro-Regular&apos;' font-size='12' transform='matrix(1 0 0 1 19.1484 73.8071)'>e</text>
-<text font-family='&apos;MyriadPro-Regular&apos;' font-size='12' transform='matrix(1 0 0 1 91.7783 26.8066)'>“HELLO”</text>
+<text font-family='&apos;MyriadPro-Regular&apos;' font-size='12' transform='matrix(1 0 0 1 91.7783 26.8066)'>“Hello”</text>
 <path d='M144.556,24c0,6.627-5.373,12-12,12h-39
   c-6.627,0-12-5.373-12-12v-3c0-6.627,5.373-12,12-12h39c6.627,0,12,5.373,12,12V24z' fill='none' stroke='#F7941E' stroke-miterlimit='10' stroke-width='3' />
 </svg><div class='highlight'><pre><code class='ruby'><span class='o'>&gt;</span> <span class='nb'>name</span> <span class='o'>=</span> <span class='s2'>&quot;Dave&quot;</span>
@@ -431,7 +435,8 @@
 </code></pre></div>
 <p>The above shows that <em>string interpolation happens when you write it down</em>. When you first write <code>f = &quot;Hello #{name}! &quot;</code> ruby immediately looks up <code>name</code> and bakes it straight into the string. Setting <code>name</code> to something differeny later on, won’t change this.</p>
 
-<p><small>In the extra challenge, the expression gave an iterative approximation to sqrt(2). You can tell by rearranging and solving the equation, that any fixed point must be a sqrt of 2. In the final part, by giving it <code>x=1</code> you forced ruby to do integer arithmetic. If you’re into that sort of thing, you might like to try and find the fixed points in this case!</small></p>
+<p><small>In the extra challenge, the expression gave an iterative approximation to sqrt(2). You can tell by rearranging and solving the equation, that any fixed point must be a sqrt of 2. In the final part, by giving it <code>x=1</code> you forced ruby to do integer arithmetic. If you&#39;re into that sort of thing, you might like to try and find the fixed points in this case!</small></p>
+
 	</div>
 
 	
@@ -439,7 +444,8 @@
 	
 
 		<h2>Introducing sinatra</h2>
-		<p>Sinatra is a lightweight web framework written in ruby.</p>
+		
+<p>Sinatra is a lightweight web framework written in ruby.</p>
 
 <h3 id="getting_sinatra">Getting sinatra</h3>
 
@@ -447,13 +453,28 @@
 
 <pre><code>$ gem install sinatra</code></pre>
 
-<p>at the command line.</p>
+<p>at the command line. We will also need a few other rubygems, so install these too:</p>
+
+<pre><code>$ gem install rake rake-test</code></pre>
+
+<p>If you used <code>rbenv</code> to install ruby, you will need to run the following command:</p>
+
+<pre><code>$ rbenv rehash </code></pre>
+
+<p>(If you can’t remember if you’re using <code>rbenv</code>, try the command anyway!)</p>
 <div class='exercise alert alert-info'><strong>Task:</strong>
 <ol>
 <li>
 <p>Install sinatra: at the command line run</p>
 
-<pre><code> $ gem install sinatra</code></pre>
+<pre><code> $ gem install sinatra
+ $ gem install rake rake-test</code></pre>
+</li>
+
+<li>
+<p>If you&#39;re using <code>rbenv</code> (or can&#39;t remember whether you are or not) run the following:</p>
+
+<pre><code> $ rbenv rehash</code></pre>
 </li>
 
 <li>
@@ -538,9 +559,6 @@ $ ruby app.rb
 
 <li>
 <p>(Extension for those who finish early.) Have a look in the file <code>test1.rb</code>. What do you think the <code>test_default</code> at the end of the file does? Try running the test file from the command line:</p>
-<p>First you need to install some more Ruby gems</p>
-<pre><code> $ gem install rake</code>
-<code> $ gem install rake-test</code></pre>
 
 <pre><code> $ ruby test1.rb</code></pre>
 
@@ -555,7 +573,8 @@ $ ruby app.rb
 	
 
 		<h2>Basic app</h2>
-		<h3 id="taking_parameters_from_the_url">Taking parameters from the url</h3>
+		
+<h3 id="taking_parameters_from_the_url">Taking parameters from the url</h3>
 
 <p>Take a look at the following code:</p>
 <div class='highlight'><pre><code class='ruby'><span class='c1'># in app.rb:</span>
